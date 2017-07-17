@@ -1,2 +1,7 @@
 
 *.gpr
+*.lxi
+*.log
+*.dat
+*.cmd
+*.lst

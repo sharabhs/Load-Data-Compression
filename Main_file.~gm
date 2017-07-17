@@ -21,8 +21,15 @@ display weekseq;
 parameter RawDataWeek(week,sequence,regions);
 RawDataWeek(week,sequence,regions)$weekseq(week,sequence) = RawData(sequence,regions);
 
+*display rawDataWeek;
 
-display RawDataWeek;
+
+*Net Load Algorithm
+parameter NLDC(sequence,regions);
+alis(hours,sequence);
+
+Equations NLDCarrange(regions);
+NLDCarrange(regions)..           NLDC(hours,regions)=L=RawData(sequence,regions);
 
 
 
